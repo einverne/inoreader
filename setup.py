@@ -23,10 +23,12 @@ setup(name='inoreader',
       packages=['inoreader'],
       install_requires=[
           'pyyaml',
+          'requests',
+          'ndg-httpsclient'
       ],
       test_suite='nose.collector',
       tests_require=['nose', 'nose-cover3'],
-      # entry_points={
-      #     'console_scripts': ['funniest-joke=funniest.cmd:main'],
-      # },
+      entry_points={
+          'console_scripts': ['inoreader=inoreader.cl_utils:main'],
+      },
       zip_safe=False)
