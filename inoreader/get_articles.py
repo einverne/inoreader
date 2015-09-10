@@ -95,10 +95,13 @@ class get_articles():
         )
         self.header = header.get()
 
+        import urllib
+        urlString = urllib.quote(self.stream)
+
         if self.stream in ["read", "broadcast", "like", "starred"]:
-            self.stream = "user/-/state/com.google/" + self.stream
+            self.stream = "user/-/state/com.google/" + urlString
         else:
-            self.stream = "user/-/label/" + self.stream
+            self.stream = "user/-/label/" + urlString
         self.url = "https://www.inoreader.com/reader/api/0/stream/contents/" + \
             self.stream
 
@@ -132,15 +135,17 @@ class get_articles():
             if r.status_code != 200:
                 print('Response HTTP Status Code   : {status_code}'.format(
                     status_code=r.status_code))
+                print r.url
+                sys.exit(0)
             if len(r.content) != 0:
                 thisUrl = r.url
                 # print """URL: %(thisUrl)s""" % locals()
                 articles = r.json()
             else:
-                print "No articles found at this URL: " + r.url
+                print "No articles matched in inoreader"
                 return []
             if len(articles["items"]) == 0:
-                print "No articles found at this URL: " + r.url
+                print "No articles matched in inoreader"
                 return []
             # print articles
         except requests.exceptions.RequestException as e:
