@@ -164,7 +164,9 @@ class get_articles():
                 except:
                     thisArticle["alternate-url"] = None
                 try:
-                    thisArticle["enclosure-url"] = item["enclosure"][0]["href"]
+                    for media in item["enclosure"]:
+                        if ".mp3" in media["href"]:
+                            thisArticle["enclosure-url"] = media["href"]
                 except:
                     thisArticle["enclosure-url"] = None
                 try:

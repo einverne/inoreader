@@ -143,7 +143,8 @@ class _get_access_token():
         stream = file(fileName, 'w')
         self.settings["inoreader"]["access_token"] = self.authToken
         yamlContent = self.settings
-        yaml.dump(yamlContent, stream, default_flow_style=False)
+        yaml.dump(yamlContent, stream,
+                  default_flow_style=False, allow_unicode=True)
         stream.close()
 
         self.log.info('completed the ``add_access_token_to_settings`` method')
