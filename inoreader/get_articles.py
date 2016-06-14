@@ -1,10 +1,7 @@
 #!/usr/local/bin/python
 # encoding: utf-8
 """
-get_articles.py
-===================
-:Summary:
-    Add subscription to inoread
+*Add subscription to inoread*
 
 :Author:
     David Young
@@ -12,13 +9,8 @@ get_articles.py
 :Date Created:
     August 26, 2015
 
-:dryx syntax:
-    - ``_someObject`` = a 'private' object that should only be changed for debugging
-
-:Notes:
-    - If you have any questions requiring this script/module please email me: d.r.young@qub.ac.uk
-
-:Tasks:
+.. todo::
+    
     @review: when complete pull all general functions and classes into dryxPython
 
 # xdocopt-usage-tempx
@@ -35,7 +27,7 @@ import requests
 from docopt import docopt
 from dryxPython import logs as dl
 from dryxPython import commonutils as dcu
-from dryxPython.projectsetup import setup_main_clutil
+from fundamentals import tools, times
 from inoreader._get_access_token import _get_access_token
 # from ..__init__ import *
 
@@ -46,7 +38,7 @@ from inoreader._get_access_token import _get_access_token
 class get_articles():
 
     """
-    The worker class for the get_articles module
+    *The worker class for the get_articles module*
 
     **Key Arguments:**
         - ``log`` -- logger
@@ -56,7 +48,8 @@ class get_articles():
         - ``maxArticles`` -- maximum number of articles to return (False = All)
         - ``unreadOrStarred`` -- return only unread or starred
 
-    **Todo**
+    .. todo::
+
         - @review: when complete, clean get_articles class
         - @review: when complete add logging
         - @review: when complete, decide whether to abstract class to another module
@@ -109,12 +102,14 @@ class get_articles():
 
     # Method Attributes
     def get(self):
-        """get the get_articles object
+        """
+        *get the get_articles object*
 
         **Return:**
             - ``get_articles``
 
-        **Todo**
+        .. todo::
+
             - @review: when complete, clean get method
             - @review: when complete add logging
         """
@@ -198,7 +193,8 @@ class get_articles():
 
     def setup_parameters(
             self):
-        """setup parameters
+        """
+        *setup parameters*
 
         **Key Arguments:**
             # -
@@ -206,7 +202,8 @@ class get_articles():
         **Return:**
             - None
 
-        **Todo**
+        .. todo::
+
             - @review: when complete, clean setup_parameters method
             - @review: when complete add logging
         """

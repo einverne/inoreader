@@ -1,10 +1,7 @@
 #!/usr/local/bin/python
 # encoding: utf-8
 """
-edit_tags.py
-===================
-:Summary:
-    Add subscription to inoread
+*Add subscription to inoread*
 
 :Author:
     David Young
@@ -12,13 +9,8 @@ edit_tags.py
 :Date Created:
     August 26, 2015
 
-:dryx syntax:
-    - ``_someObject`` = a 'private' object that should only be changed for debugging
-
-:Notes:
-    - If you have any questions requiring this script/module please email me: d.r.young@qub.ac.uk
-
-:Tasks:
+.. todo::
+    
     @review: when complete pull all general functions and classes into dryxPython
 
 # xdocopt-usage-tempx
@@ -34,7 +26,7 @@ import requests
 from docopt import docopt
 from dryxPython import logs as dl
 from dryxPython import commonutils as dcu
-from dryxPython.projectsetup import setup_main_clutil
+from fundamentals import tools, times
 from inoreader._get_access_token import _get_access_token
 # from ..__init__ import *
 
@@ -45,7 +37,7 @@ from inoreader._get_access_token import _get_access_token
 class edit_tags():
 
     """
-    The worker class for the edit_tags module
+    *The worker class for the edit_tags module*
 
     **Key Arguments:**
         - ``log`` -- logger
@@ -56,7 +48,8 @@ class edit_tags():
         - ``articleIdList`` -- list of article ids
 
 
-    **Todo**
+    .. todo::
+
         - @review: when complete, clean edit_tags class
         - @review: when complete add logging
         - @review: when complete, decide whether to abstract class to another module
@@ -107,12 +100,14 @@ class edit_tags():
     # 4. @flagged: what actions does each object have to be able to perform? Add them here
     # Method Attributes
     def get(self):
-        """get the edit_tags object
+        """
+        *get the edit_tags object*
 
         **Return:**
             - ``edit_tags``
 
-        **Todo**
+        .. todo::
+
             - @review: when complete, clean get method
             - @review: when complete add logging
         """
@@ -145,7 +140,8 @@ class edit_tags():
 
     def setup_parameters(
             self):
-        """setup paramms
+        """
+        *setup paramms*
 
         **Key Arguments:**
             # -
@@ -153,7 +149,8 @@ class edit_tags():
         **Return:**
             - None
 
-        **Todo**
+        .. todo::
+
             - @review: when complete, clean setup_parameters method
             - @review: when complete add logging
         """

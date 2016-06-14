@@ -21,6 +21,7 @@ setup(name='inoreader',
       author_email='davidrobertyoung@gmail.com',
       license='MIT',
       packages=['inoreader'],
+      include_package_data=True,
       install_requires=[
           'pyyaml',
           'requests',

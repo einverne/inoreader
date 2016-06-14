@@ -1,10 +1,7 @@
 #!/usr/local/bin/python
 # encoding: utf-8
 """
-_get_access_token.py
-====================
-:Summary:
-    Get access token for Inoreader and store in settings file
+*Get access token for Inoreader and store in settings file*
 
 :Author:
     David Young
@@ -12,13 +9,8 @@ _get_access_token.py
 :Date Created:
     August 24, 2015
 
-:dryx syntax:
-    - ``_someObject`` = a 'private' object that should only be changed for debugging
-
-:Notes:
-    - If you have any questions requiring this script/module please email me: d.r.young@qub.ac.uk
-
-:Tasks:
+.. todo::
+    
     @review: when complete pull all general functions and classes into dryxPython
 
 # xdocopt-usage-tempx
@@ -36,14 +28,14 @@ import requests
 from docopt import docopt
 from dryxPython import logs as dl
 from dryxPython import commonutils as dcu
-from dryxPython.projectsetup import setup_main_clutil
+from fundamentals import tools, times
 # from ..__init__ import *
 
 
 class _get_access_token():
 
     """
-    The worker class for the _get_access_token module
+    *The worker class for the _get_access_token module*
 
     **Key Arguments:**
         - ``log`` -- logger
@@ -70,7 +62,8 @@ class _get_access_token():
 
     # Method Attributes
     def get(self):
-        """get the _get_access_token object
+        """
+        *get the _get_access_token object*
 
         **Return:**
             - ``_get_access_token``
@@ -89,7 +82,8 @@ class _get_access_token():
 
     def request_username_and_password(
             self):
-        """request username and password
+        """
+        *request username and password*
         """
         self.log.info('starting the ``request_username_and_password`` method')
 
@@ -102,7 +96,8 @@ class _get_access_token():
 
     def request_access_token(
             self):
-        """request access token
+        """
+        *request access token*
         """
         self.log.info('starting the ``request_access_token`` method')
 
@@ -135,7 +130,8 @@ class _get_access_token():
 
     def add_access_token_to_settings(
             self):
-        """add access token to settings
+        """
+        *add access token to settings*
         """
         self.log.info('starting the ``add_access_token_to_settings`` method')
 
@@ -152,7 +148,8 @@ class _get_access_token():
 
     def check_for_access_token(
             self):
-        """check for access token - and that it works
+        """
+        *check for access token - and that it works*
         """
         self.log.info('starting the ``check_for_access_token`` method')
 

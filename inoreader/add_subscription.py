@@ -1,10 +1,7 @@
 #!/usr/local/bin/python
 # encoding: utf-8
 """
-add_subscription.py
-===================
-:Summary:
-    Add subscription to inoread
+*Add subscription to inoread*
 
 :Author:
     David Young
@@ -12,13 +9,8 @@ add_subscription.py
 :Date Created:
     August 26, 2015
 
-:dryx syntax:
-    - ``_someObject`` = a 'private' object that should only be changed for debugging
-
-:Notes:
-    - If you have any questions requiring this script/module please email me: d.r.young@qub.ac.uk
-
-:Tasks:
+.. todo::
+    
     @review: when complete pull all general functions and classes into dryxPython
 
 # xdocopt-usage-tempx
@@ -34,7 +26,7 @@ import requests
 from docopt import docopt
 from dryxPython import logs as dl
 from dryxPython import commonutils as dcu
-from dryxPython.projectsetup import setup_main_clutil
+from fundamentals import tools, times
 from _get_access_token import _get_access_token
 
 
@@ -44,7 +36,7 @@ from _get_access_token import _get_access_token
 class add_subscription():
 
     """
-    The worker class for the add_subscription module
+    *The worker class for the add_subscription module*
 
     **Key Arguments:**
         - ``log`` -- logger
@@ -54,7 +46,8 @@ class add_subscription():
         - ``folder`` -- folder to add the rss feed to
 
 
-    **Todo**
+    .. todo::
+
         - @review: when complete, clean add_subscription class
         - @review: when complete add logging
         - @review: when complete, decide whether to abstract class to another module
@@ -107,12 +100,14 @@ class add_subscription():
     # 4. @flagged: what actions does each object have to be able to perform? Add them here
     # Method Attributes
     def get(self):
-        """get the add_subscription object
+        """
+        *get the add_subscription object*
 
         **Return:**
             - ``add_subscription``
 
-        **Todo**
+        .. todo::
+
             - @review: when complete, clean get method
             - @review: when complete add logging
         """
